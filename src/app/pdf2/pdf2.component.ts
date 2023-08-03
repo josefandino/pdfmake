@@ -20,36 +20,94 @@ export class Pdf2Component {
           table: {
             widths: ['*'],
             body: [
+              // todo: SECTION 1 CABECERA DEL DOCUMENTO
               [
                 {
-
                   style: 'tableInternals',
                   table: {
                     widths: ['*', '*', '*'],
                     body: [
                       [
                         {
-                          border: [false, false, false, false],
-                          text: 'Col1',
+                          border: [false, false, true, false],
+                          rowSpan: 2, text: 'Logo', alignment: 'center'
+                        },
+                        {
+                          border: [false, false, true, true],
+                          text: 'Proyecto CAREM 25', style: 'subheader'
+                        },
+                        {
+                          border: [false, false, false, true],
+                          text: 'SOC-CAREM25CO-55\nC0000\ncRev.: 0c', alignment: 'center'
+                        },
+                      ],
+                      [
+                        {},
+                        {
+                          border: [false, false, true, false],
+                          text: 'Dpto. Coordinación Preservación y Gestión de la  Información y Operación', alignment: 'center'
                         },
                         {
                           border: [false, false, false, false],
-                          text: 'Col1',
-                        },
-                        {
-                          border: [false, false, false, false],
-                          text: 'Col1',
+                          text: 'Página:1 de 115', alignment: 'center', margin: [0, 10, 1, 1]
                         },
                       ],
                     ]
                   },
                 }
               ],
+
+              // todo: SECTION 2 servicio de consultoria
+              [
+                {
+                  style: 'tableInternals',
+                  table: {
+                    widths: ['auto', '*',],
+                    body: [
+                      [
+                        {
+                          border: [false, false, false, false],
+                          text: 'TÍTULO:', bold: true
+                        },
+                        {
+                          border: [false, false, false, false],
+                          text: 'Servicio de consultoría para desarrollo de software'
+                        },
+                      ],
+
+                    ]
+                  },
+                }
+              ],
+              // todo: SECTION 3
+             
+              [
+                {
+                  style: 'tableInternals',
+                  table: {
+                    widths: ['*',],
+                    body: [
+                      [                        {
+                          border: [false, false, false, false],
+                          text: 'Descripción del Producto / Servicio y su Uso Previsto:' 
+                        },                        
+                      ],
+                      [                        {
+                          border: [false, false, false, false],
+                          text: 'Contratación del servicio de consultoría para desarrollo de software.', 
+                        },                        
+                      ],
+
+                    ]
+                  },
+                }
+              ],
+              // todo: SECTION 4
+
               ['column 1'],
               ['column 1'],
               ['column 1'],
-              ['column 1'],
-            ]
+            ],
           }
         },
 
